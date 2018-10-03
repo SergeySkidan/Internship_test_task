@@ -1,28 +1,118 @@
-.App {
+.site {
+  background: url('http://domikru.net/wp-content/uploads/2014/12/%D1%80%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0.jpg') 50% 50% no-repeat; /* Добавляем фон положение относительно рамки, не повторять */
+  background-size: auto 100%; /* Масштабируем фон */
+}
+
+.masthead,
+.main-content,
+.sidebar,
+.twin,
+.footer {
+	padding: 1em 2em;
+}
+
+.main-content {
+  background:  #f39c12;
+}
+
+.masthead {
+
+}
+
+.sidebar {
+background:  #60f1f0;
+}
+.primary-aside
+{
+background:  #60f1f0;
+}
+.twin {
+	background: #2185C5;
+}
+
+.twin:last-of-type {
+	background: #7ECEFD;
+}
+
+.colophon {
+	padding: 1em;
+	background: #3E454C;
+	color: white;
+}
+
+.colophon:hover,
+.colophon:focus {
+	border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+	.app  {
+		max-width: 50em;
+		margin: 0 auto;
+	}
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+	@supports (display: grid) {
+
+	.app  {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+		}
+
+		.masthead,
+		.colophon {
+			grid-column: span 12;
+		}
+
+		.main-content {
+			grid-column: 2/6;
+		}
+
+		.sidebar {
+			grid-column: 6/12;
+		}
+
+		.twin {
+			grid-column: 2/12;
+			grid-row: 3/4;
+		}
+
+		.twin:last-of-type {
+			grid-column: 6/12;
+		}
+
+	}
+}
+
+
+.h6-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.h6-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.h6-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

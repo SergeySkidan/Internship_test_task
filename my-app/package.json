@@ -3,10 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "history": "^4.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-history": "^0.18.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "1.1.5",
-    "semantic-ui-react": "^0.82.5"
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.82.5",
+    "xml-loader": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,7 +26,10 @@
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.6.1",
     "gulp-sass": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-webserver": "^0.9.1",
     "semantic-ui": "^2.4.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",

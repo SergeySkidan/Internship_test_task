@@ -27,7 +27,11 @@ var
 
   // rtl
   buildRTL     = require('./tasks/rtl/build'),
-  watchRTL     = require('./tasks/rtl/watch')
+  watchRTL     = require('./tasks/rtl/watch'),
+
+  connect = require('gulp-connect'),
+  browserSync = require('browser-sync')
+
 ;
 
 
