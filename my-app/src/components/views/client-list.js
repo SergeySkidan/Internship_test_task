@@ -2,19 +2,44 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './client-list.css';
+import * as clientApi from '../../api/client-api';
+
+import ClientInfoList from './client-info-list';
+
 class ClientItem extends React.Component {
 
+ onClickFilter(event){
+
+  var a = this.props.client.lastName
+  var client = clientApi.getClients();
+
+  const result = client.filter(client => client.lastName == a );
+
+  var a = result[0];
+  var c = '';
+  for (var key in a) {
+    c += "\n"+a[key];
+
+  }
+
+  document.getElementById("demo").innerHTML = c;
+// for (var key in a) {
+// alert('key: '+key+' '+ a[key]);
+// }
+<ClientInfoList clients={a}/>;
+
+}
 
   render() {
     const client = this.props.client;
 
-    return (<Link className='client-list' to={'/clients/' + client.general.lastName}>
+    return (<button onClick={(e) => this.onClickFilter(e)} >
 
-      <img src={this.props.client.general.avatar} alt={this.props.client.general.firstName} className='client__avatar'/>
-      <h4 className='client__Name'>{this.props.client.general.firstName} {this.props.client.general.lastName}</h4>
+      <img src={this.props.client.avatar} alt={this.props.client.firstName} className='client__avatar'/>
+      <h4 className='client__Name'>{this.props.client.firstName} {this.props.client.lastName}</h4>
 
-      <div className='client__job'>{this.props.client.job.title}</div>
-      </Link>
+      <div className='client__job'>{this.props.client.title}</div>
+      </button>
 
   )
   }

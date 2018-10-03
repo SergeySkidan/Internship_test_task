@@ -14,7 +14,7 @@ class ClientListContainer extends React.Component{
 
   render() {
     return (
-      <ClientList clients={this.props.clients}/>
+      <ClientList clients={clientApi.getClients()}/>
     );
   }
 };

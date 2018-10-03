@@ -7,11 +7,11 @@ import { loadSearchLayout } from '../../actions/search-layout-actions';
 
 class ClientInfoContainer extends React.Component{
 
-  componentDidMount = () => {
-    let clientInfo = this.props.params;
-  alert(this.props.params);
-    clientApi.getInfo(clientInfo);
-  }
+  // componentDidMount = () => {
+  //   let clientInfo = this.props.params;
+  //
+  //   clientApi.getInfo(clientInfo);
+  // }
 
   render() {
     return (

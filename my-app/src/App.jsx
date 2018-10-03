@@ -16,6 +16,8 @@ import ClientInfoContainer from './components/containers/client-info-container';
 export default class App extends Component {
 render() {
 return (
+  <Router history={history}>
+
   <div className="app">
 
         <header className="masthead">
@@ -23,21 +25,18 @@ return (
 
           <main className="main-content">
 
-                   <li><Link to="/" activeClassName="active">Home</Link></li>
-                   <li><Link to="/clients" activeClassName="active">Users</Link></li>
+          <Route component={SearchLayoutContainer}>
 
+          </Route>
 
-                     <Route path="/">
-                       <Route component={SearchLayoutContainer}>
+          <Route component={ClientListContainer} />
 
-                       </Route>
-                     </Route>
-                     <Route component={ClientListContainer} />
           </main>
 
                   <aside className="sidebar">
 
-  <Route path='/clients/:lastName' component={ClientInfoContainer}/>
+                    <div id = "demo"></div>
+<Route path='/clients/:lastName' component={ClientInfoContainer}/> 
                   </aside>
 
                   <aside className="twin">
@@ -52,7 +51,7 @@ return (
 
                   </div>
 
-
+</Router>
           );
       }
   }
