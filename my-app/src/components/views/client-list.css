@@ -1,60 +1,56 @@
 .client-list
 {
-  width: 320px;
-  margin: 0px 0px;
-  text-align: left;
-  border: 1px solid #000;
+width: 90%;
+text-align: left;
+border: 1px solid #000;
 
+background:  #f39c12;
+background: linear-gradient(top,  #f39c12 0%, #ddb87a 100%);
+background: -moz-linear-gradient(top,  #f39c12 0%, #ddb87a 100%);
+background: -webkit-linear-gradient(top, #f39c12 0%,#ddb87a 100%);
+box-shadow: 0px 0px 0px rgba(0,0,0,0.15);
+padding: 1em;
+box-shadow:
+0 1px 4px rgba(0, 0, 0, .3),
+-23px 0 20px -23px rgba(0, 0, 0, .8),
+23px 0 20px -23px rgba(0, 0, 0, .8),
+0 0 40px rgba(0, 0, 0, .1) inset;
 
-
-  background:  #f39c12;
-  background: linear-gradient(top,  #f39c12 0%, #ddb87a 100%);
-  background: -moz-linear-gradient(top,  #f39c12 0%, #ddb87a 100%);
-  background: -webkit-linear-gradient(top, #f39c12 0%,#ddb87a 100%);
-  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-
-  padding: 1em;
-   box-shadow:
-    0 1px 4px rgba(0, 0, 0, .3),
-    -23px 0 20px -23px rgba(0, 0, 0, .8),
-    23px 0 20px -23px rgba(0, 0, 0, .8),
-    0 0 40px rgba(0, 0, 0, .1) inset;
-
-  float: left; /* Обтекание по правому краю */
+float: left; /* Обтекание по правому краю */
 }
 
 .client__avatar
 {
-    max-width: 90%;
-    height: 68px;
-    float: left; /* Обтекание по правому краю */
+max-width: 90%;
+height: 68px;
+float: left; /* Обтекание по правому краю */
 }
 
 .client__Name
 {
-    margin: 0px 75px;
+margin: 0px 75px;
 }
 
 .client__job
 {
-  margin: 0px 75px;
-  text-align: left;
-  font-size: 10pt; /* Размер шрифта в пунктах */
+margin: 0px 75px;
+text-align: left;
+font-size: 10pt; /* Размер шрифта в пунктах */
 }
 
 .client-list:hover {
-  padding: 1em;
-   box-shadow:
-    0 1px 4px rgba(0, 0, 0, .5),
-    -23px 0 20px -23px rgba(0, 0, 0, .12),
-    23px 0 20px -23px rgba(0, 0, 0, .12),
-    0 0 20px rgba(0, 0, 0, .5) inset;
+
+box-shadow:
+0 1px 1px rgba(0, 0, 0, .5),
+-23px 0 20px -23px rgba(0, 0, 0, .12),
+23px 0 20px -23px rgba(0, 0, 0, .12),
+0 0 20px rgba(0, 0, 0, .5) inset;
 }
 .client-list:active {
-  padding: 1em;
-   box-shadow:
-    0 1px 4px rgba(0, 0, 0, .5),
-    -23px 0 20px -23px rgba(0, 0, 0, .12),
-    23px 0 20px -23px rgba(0, 0, 0, .12),
-    0 0 40px rgba(0, 0, 0, .5) inset;
+
+box-shadow:
+0 1px 4px rgba(0, 0, 0, .5),
+-23px 0 20px -23px rgba(0, 0, 0, .12),
+23px 0 20px -23px rgba(0, 0, 0, .12),
+0 0 40px rgba(0, 0, 0, .5) inset;
 }

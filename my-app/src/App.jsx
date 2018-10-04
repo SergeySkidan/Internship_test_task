@@ -17,7 +17,7 @@ return (
   <div className="app">
 
       <main className="main-content">
-         <Route path="/clients" component={ClientListContainer} />
+         <Route path="/" component={ClientListContainer} />
       </main>
 
       <aside className="sidebar">

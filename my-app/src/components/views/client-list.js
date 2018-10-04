@@ -38,7 +38,7 @@ document.getElementById("demo").innerHTML = viewClient;
   render() {
     const client = this.props.client;
 
-    return (<Link to= {"/clients"} onClick={(e) => this.onClickFilter(e)} className ="client-list">
+    return (<Link to= {"/"} onClick={(e) => this.onClickFilter(e)} className ="client-list">
 
       <img src={this.props.client.avatar} alt={this.props.client.firstName} className='client__avatar'/>
       <h4 className='client__Name'>{this.props.client.firstName} {this.props.client.lastName}</h4>
