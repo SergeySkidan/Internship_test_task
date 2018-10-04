@@ -1,6 +1,6 @@
 .client-list
 {
-  width: 400px;
+  width: 320px;
   margin: 0px 0px;
   text-align: left;
   border: 1px solid #000;
@@ -29,6 +29,7 @@
     height: 68px;
     float: left; /* Обтекание по правому краю */
 }
+
 .client__Name
 {
     margin: 0px 75px;

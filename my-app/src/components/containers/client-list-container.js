@@ -3,18 +3,35 @@ import { connect } from 'react-redux';
 import ClientList from '../views/client-list';
 import * as clientApi from '../../api/client-api';
 import store from '../../store';
-import { loadSearchLayout } from '../../actions/search-layout-actions';
+import { Switch, BrowserRouter, Link } from 'react-router-dom';
 
 class ClientListContainer extends React.Component{
+  constructor(props) {
+      super(props);
+      this.state = {value: ''};
+      this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
 
-  componentDidMount = () => {
-    clientApi.getClients();
-    store.dispatch(loadSearchLayout('clients', 'Client Results'));
-  }
+
+  // componentDidMount = () => {
+  //   clientApi.searchClients("")
+  //   store.dispatch(loadSearchLayout('clients', 'Client Results'));
+  // }
+
+
 
   render() {
     return (
-      <ClientList clients={clientApi.getClients()}/>
+      <div>
+
+      <a><input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search"/></a>
+
+      <ClientList clients={clientApi.searchClients(this.state.value)}/>
+
+      </div>
     );
   }
 };

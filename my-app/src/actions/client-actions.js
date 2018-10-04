@@ -6,10 +6,3 @@ export function getClientsSuccess(clients) {
     clients
   };
 }
-
-export function getInfoSuccess(clientInfo) {
-  return {
-    type: types.GET_INFO_SUCCESS,
-    clientInfo
-  };
-}
