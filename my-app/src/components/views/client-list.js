@@ -53,7 +53,7 @@ export default class ClientList extends React.Component {
   render() {
     const clients = this.props.clients;
     const items = clients.map((client) => {
-    return <ClientItem id='items' key={client.id} client={client}/>;
+    return <ClientItem id='items' key={client.lastName} client={client}/>;
     });
     return (<ul>{items}</ul>);
   }
