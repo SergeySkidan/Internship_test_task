@@ -17,6 +17,8 @@
     "react-string-replace": "^0.4.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "semantic-ui-component": "0.0.7",
+    "semantic-ui-dropdown": "^2.3.2",
     "semantic-ui-react": "^0.82.5",
     "xml-loader": "^1.2.1"
   },
@@ -30,6 +32,7 @@
     "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.6.1",
+    "gulp-install": "^1.1.0",
     "gulp-sass": "^4.0.1",
     "gulp-stylus": "^2.7.0",
     "gulp-webserver": "^0.9.1",

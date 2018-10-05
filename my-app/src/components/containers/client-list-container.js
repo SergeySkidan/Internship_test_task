@@ -5,6 +5,7 @@ import * as clientApi from '../../api/client-api';
 import store from '../../store';
 import { Switch, BrowserRouter, Link } from 'react-router-dom';
 
+
 import './client-list-container.css';
 
 class ClientListContainer extends React.Component{
@@ -17,12 +18,11 @@ class ClientListContainer extends React.Component{
         this.setState({value: event.target.value});
     }
 
-
   render() {
     return (
       <div>
 
-      <div className ='_client'><input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search" className ="input__client"/></div>
+      <div ><input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search" className ="input__client"/></div>
 
       <ClientList clients={clientApi.searchClients(this.state.value)}/>
 

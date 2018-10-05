@@ -1,6 +1,6 @@
 .client-list
 {
-width: 90%;
+width: 100%;
 text-align: left;
 border: 1px solid #000;
 
@@ -21,7 +21,7 @@ float: left; /* Обтекание по правому краю */
 
 .client__avatar
 {
-max-width: 90%;
+max-width: 50%;
 height: 68px;
 float: left; /* Обтекание по правому краю */
 }
@@ -29,13 +29,14 @@ float: left; /* Обтекание по правому краю */
 .client__Name
 {
 margin: 0px 75px;
+font-size: 18pt; /* Размер шрифта в пунктах */
 }
 
 .client__job
 {
 margin: 0px 75px;
 text-align: left;
-font-size: 10pt; /* Размер шрифта в пунктах */
+font-size: 12pt; /* Размер шрифта в пунктах */
 }
 
 .client-list:hover {

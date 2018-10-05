@@ -15,7 +15,6 @@ export function getClients() {
     alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
   } else {
     // вывести результат
-    //alert(xhr.responseText);
     var a = JSON.parse(xhr.responseText);// responseText -- текст ответа.
     var b = [];
 
@@ -38,7 +37,6 @@ export function getClients() {
   }
       return b;
   }
-
   // return axios.get('http://localhost:3001/clients')
   //   .then(response => {
   //     store.dispatch(getClientsSuccess(response.data));
@@ -83,31 +81,18 @@ export function searchClients(query) {
 //если запрос undef
 if(!!!query){
 query ='';
-//return b;
 }
-//alert('query '+query);
 var filterClients = [];
 for (var i = 0; i < b.length; i++) {
-
   for (var key in b[i]) {
-    //alert('k '+key+ ' - '+b[i][key]);
     //убираем из поиска символы строки запроса картинки http
   if((b[i][key].substring(0,8)).indexOf("https://") == -1 && (b[i][key].toLowerCase()).indexOf(query.toLowerCase()) != -1){
     //  alert(b[i][key]);
       filterClients.push(b[i]);
       break;
   }
-//alert('i '+i);
   }
 }
-//alert('ccc '+result);
-  // var a = filterClients[0];
-  // var c = '';
-  // for (var key in a) {
-  //   c += "\n"+a[key];
-  //   alert('key '+key+' - '+a[key])
-  // }
-//alert('filterClients: '+filterClients);
 return filterClients;
 
   // return axios.get('http://localhost:3001/clients?q='+ query)

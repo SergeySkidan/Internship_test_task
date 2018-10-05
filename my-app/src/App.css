@@ -5,11 +5,19 @@ padding: 1em 0em;
 }
 
 .main-content {
+border: 0.5px solid #000;
 background:  #f39c12;
-text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+ul
+{
+padding-inline-start: 00px;
 }
 
 .sidebar {
+border: 0.5px solid #000;
+text-align: center;
 background:  #f1aa3a;
 }
 
