@@ -1,0 +1,55 @@
+.main-content,
+.sidebar
+{
+padding: 1em 0em;
+}
+
+.main-content {
+border: 0.5px solid #000;
+background:  #f39c12;
+margin-left: auto;
+margin-right: auto;
+}
+ul
+{
+padding-inline-start: 00px;
+}
+
+.sidebar {
+border: 0.5px solid #000;
+text-align: center;
+background:  #f1aa3a;
+}
+
+@supports not (display: grid) {
+.app
+{
+max-width: 50em;
+margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 500px) {
+@supports (display: grid) {
+.app
+{
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto);
+}
+.masthead,
+.colophon
+{
+grid-column: span 12;
+}
+.main-content
+{
+grid-column: 2/6;
+}
+.sidebar
+{
+grid-column: 6/12;
+}
+
+	}
+}

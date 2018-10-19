@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { connect } from 'react-redux';
 import ClientList from '../views/client-list';
@@ -20,9 +21,9 @@ class ClientListContainer extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className='client_list_container'>
 
-      <div ><input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search" className ="input__client"/></div>
+      <div><input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search" className ="input__client"/></div>
 
       <ClientList clients={clientApi.searchClients(this.state.value)}/>
 
