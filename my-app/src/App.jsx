@@ -31,9 +31,9 @@ return (
   }
 
   function mapStateToProps(state) {
-      const { alert } = state;
+      const { clients } = state;
       return {
-          alert
+          clients
       };
   }
 

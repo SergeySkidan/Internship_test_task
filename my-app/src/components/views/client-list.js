@@ -8,7 +8,8 @@ import * as clientApi from '../../api/client-api';
 class ClientItem extends React.Component {
 
 onClickFilter(event){
-var clientTemp = clientApi.searchClients(this.props.client.lastName);
+
+var clientTemp = clientApi.searchClients(this.props.client.firstName);
 var client = clientTemp[0];
 var viewClient = '<div className =\'client__info\'>';
 viewClient += "<table width=\"100%\" cellspacing=\"30\" cellpadding=\"20\">";
